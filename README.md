@@ -19,4 +19,17 @@
 ### LOAD
 - `etl_vendas.xlsx` — arquivo Excel com duas abas (Resumo + Detalhado)
 
+## Como Executar
+
+```bash
+# 1. Instalar dependências
+pip install -r requirements.txt
+
+# 2. Gerar os dados brutos fictícios
+python gerar_dados.py
+
+# 3. Executar o ETL
+python etl.py
+```
+
 *Projeto desenvolvido para desafio de codigo em Python da DIO.*
