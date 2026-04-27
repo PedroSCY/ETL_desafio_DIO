@@ -4,10 +4,14 @@ import pandas as pd
 from datetime import datetime, timedelta
 import numpy as np
 
-os.makedirs("data", exist_ok=True)
 
 
 QTDE_PEDIDOS = 2000
+QTDE_CLIENTES = 400
+
+DIRETORIO_FONTE = "data/fonte"
+os.makedirs(DIRETORIO_FONTE, exist_ok=True)
+
 
 def data_aleatoria(data_Inicio: datetime, data_termino: datetime ):
   periodo = (data_termino - data_Inicio).days
@@ -40,7 +44,7 @@ def gerar_clientes():
   NOMES = ["Ana", "Carlos", "Maria", "João", "Fernanda", "Lucas","Juliana", "Pedro", "Beatriz", "Rafael", "Camila", "Diego", "Larissa", "Thiago", "Aline", "Rodrigo", "Natalia", "Bruno", "Gabriela", "Felipe"]
   SOBRENOMES = ["Silva", "Santos", "Oliveira", "Souza", "Costa", "Ferreira", "Alves", "Pereira", "Lima", "Gomes", "Ribeiro", "Carvalho", "Melo", "Araújo", "Rocha", "Mendes", "Nunes", "Martins"]
 
-  for i in range(50):
+  for i in range(1, QTDE_CLIENTES, +1):
     nome = f"{random.choice(NOMES)} {random.choice(SOBRENOMES)}"
   
     #5% de chance de nomes com espaços
@@ -51,7 +55,7 @@ def gerar_clientes():
       "nome": nome,
       "email": f"{nome.split()[0]}{i}@cliente.com",
       "regiao": random.choice(REGIOES) if random.random() < 0.90 else "", #10% de chance de não ter a região
-      "idVip": random.random() < 0.20, #20% de chance de ser vip
+      "is_vip": random.random() < 0.20, #20% de chance de ser vip
       "ano_cadastro": random.randint(2000,2026)
     })
 
@@ -83,6 +87,7 @@ def gerar_produtos():
 
  return  pd.DataFrame(produtos)
 
+# gera pedidos
 def gerar_pedidos(id_maximo_cliente: int, id_maximo_produto: int):
   inicio = datetime(2024,1,1)
   termino = datetime(2026,4,30)
@@ -126,18 +131,20 @@ def gerar_pedidos(id_maximo_cliente: int, id_maximo_produto: int):
 def main():
   print("Gerando clientes", end="...\n")
   clientes = gerar_clientes()
-  clientes.to_csv("data/clientes.csv", index=False)
+  clientes.to_csv(f"{DIRETORIO_FONTE}/clientes.csv", index=False)
   print(f"criado | clientes.csv | com {len(clientes)} clientes")
 
   print("Gerando produtos", end="...\n")
   produtos = gerar_produtos()
-  produtos.to_csv("data/produtos.csv", index=False)
+  produtos.to_csv(f"{DIRETORIO_FONTE}/produtos.csv", index=False)
   print(f"criado | produtos.csv | com {len(produtos)} produtos")
 
-  print("Gerando produtos", end="...\n")
+  print("Gerando pedidos", end="...\n")
   pedidos = gerar_pedidos(len(clientes), len(produtos))
-  pedidos.to_csv("data/pedidos.csv", index=False)
-  print(f"criado | produtos.csv | com {len(produtos)} produtos")
+  pedidos.to_csv(f"{DIRETORIO_FONTE}/pedidos.csv", index=False)
+  print(f"criado | pedidos.csv | com {len(pedidos)} pedidos")
+
+  print(f"\n Arquivos salver em: {DIRETORIO_FONTE}/")
 
 if __name__ == "__main__":
   main()
