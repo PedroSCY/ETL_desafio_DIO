@@ -1,0 +1,51 @@
+cliente_id,nome,email,regiao,idVip,ano_cadastro
+0,Fernanda Pereira,Fernanda0@cliente.com,Centro-Oeste,False,2011
+1,João Rocha,João1@cliente.com,Sudeste,False,2003
+2,Gabriela Oliveira,Gabriela2@cliente.com,Centro-Oeste,False,2022
+3,Natalia Costa,Natalia3@cliente.com,Sudeste,False,2024
+4,Bruno Nunes,Bruno4@cliente.com,Sudeste,True,2016
+5,Rafael Gomes,Rafael5@cliente.com,Centro-Oeste,False,2021
+6,Felipe Costa,Felipe6@cliente.com,Nordeste,False,2016
+7,Pedro Silva,Pedro7@cliente.com,Sudeste,False,2007
+8,Rafael Carvalho,Rafael8@cliente.com,Centro-Oeste,True,2019
+9,Natalia Rocha,Natalia9@cliente.com,Norte,False,2025
+10,Pedro Costa,Pedro10@cliente.com,,False,2021
+11,Gabriela Araújo,Gabriela11@cliente.com,Centro-Oeste,True,2003
+12,Thiago Gomes,Thiago12@cliente.com,Centro-Oeste,True,2026
+13,João Gomes,João13@cliente.com,Norte,False,2015
+14,Beatriz Pereira,Beatriz14@cliente.com,Nordeste,True,2014
+15,Bruno Carvalho,Bruno15@cliente.com,Norte,False,2002
+16,Aline Pereira,Aline16@cliente.com,Sul,False,2024
+17,Aline Ferreira,Aline17@cliente.com,Centro-Oeste,True,2023
+18,Rodrigo Nunes,Rodrigo18@cliente.com,Nordeste,True,2012
+19,Pedro Melo,Pedro19@cliente.com,Centro-Oeste,True,2009
+20,Pedro Martins,Pedro20@cliente.com,Norte,True,2015
+21,Carlos Souza,Carlos21@cliente.com,Sudeste,False,2015
+22,Rodrigo Costa,Rodrigo22@cliente.com,Centro-Oeste,False,2026
+23,  Bruno Pereira  ,Bruno23@cliente.com,Centro-Oeste,False,2017
+24,Beatriz Oliveira,Beatriz24@cliente.com,Sul,False,2003
+25,Rodrigo Gomes,Rodrigo25@cliente.com,Sudeste,False,2009
+26,Rodrigo Gomes,Rodrigo26@cliente.com,Sul,True,2012
+27,Rodrigo Mendes,Rodrigo27@cliente.com,Sul,False,2007
+28,Felipe Silva,Felipe28@cliente.com,Norte,False,2014
+29,Thiago Santos,Thiago29@cliente.com,Nordeste,False,2007
+30,João Santos,João30@cliente.com,Sudeste,True,2009
+31,  Larissa Martins  ,Larissa31@cliente.com,Nordeste,False,2021
+32,  Larissa Martins  ,Larissa32@cliente.com,Norte,False,2023
+33,Aline Mendes,Aline33@cliente.com,Sul,False,2001
+34,Felipe Martins,Felipe34@cliente.com,Nordeste,False,2004
+35,Ana Lima,Ana35@cliente.com,,False,2018
+36,Thiago Araújo,Thiago36@cliente.com,Sudeste,False,2007
+37,  Rodrigo Melo  ,Rodrigo37@cliente.com,Sudeste,False,2005
+38,Camila Costa,Camila38@cliente.com,Norte,False,2010
+39,Diego Ferreira,Diego39@cliente.com,Sul,False,2018
+40,Juliana Costa,Juliana40@cliente.com,Nordeste,False,2003
+41,Maria Silva,Maria41@cliente.com,Norte,False,2011
+42,Maria Lima,Maria42@cliente.com,,False,2004
+43,Juliana Martins,Juliana43@cliente.com,Centro-Oeste,False,2004
+44,Gabriela Araújo,Gabriela44@cliente.com,Sudeste,False,2012
+45,Pedro Silva,Pedro45@cliente.com,Sudeste,False,2017
+46,  Camila Melo  ,Camila46@cliente.com,Centro-Oeste,False,2010
+47,Ana Santos,Ana47@cliente.com,Nordeste,False,2019
+48,Carlos Melo,Carlos48@cliente.com,,False,2007
+49,Ana Souza,Ana49@cliente.com,Nordeste,True,2022
