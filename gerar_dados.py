@@ -1,8 +1,17 @@
 import random
 import os
 import pandas as pd
+from datetime import datetime, timedelta
+import numpy as np
 
 os.makedirs("data", exist_ok=True)
+
+
+QTDE_PEDIDOS = 2000
+
+def data_aleatoria(data_Inicio: datetime, data_termino: datetime ):
+  periodo = (data_termino - data_Inicio).days
+  return (data_Inicio + timedelta(days=random.randint(0, periodo))).strftime("%Y-%m-%d")
 
 
 PRODUTOS_POR_CATEGORIA = {
@@ -19,6 +28,8 @@ PRODUTOS_POR_CATEGORIA = {
 }
 
 REGIOES = ["Sul", "Sudeste", "Centro-Oeste", "Norte", "Nordeste"] #Regioes comuns do Brasil.
+
+STATUS = ["processando", "enviado", "cancelado", "entregue", "entregue", "entregue"]
 
 
 # gera clientes 
@@ -46,6 +57,7 @@ def gerar_clientes():
 
   return pd.DataFrame(clientes)
 
+# gera produtos
 def gerar_produtos():
  #modelo: id, nome, categoria, preco, marca.
  produtos = []
@@ -71,6 +83,44 @@ def gerar_produtos():
 
  return  pd.DataFrame(produtos)
 
+def gerar_pedidos(id_maximo_cliente: int, id_maximo_produto: int):
+  inicio = datetime(2024,1,1)
+  termino = datetime(2026,4,30)
+
+  pedidos = []
+  for i in range(1,QTDE_PEDIDOS + 1):
+    qtde = random.randint(1,10)
+    preco = round(random.uniform(15, 4000), 2) # vou ter que por um valor aleatorio (sujo), considere proposital kkk 
+
+    # 3% de quantidades negativas
+    if random.random() < 0.03:
+      qtde = -qtde
+
+    # 2% de precos nogativos
+    if random.random() < 0.02:
+      preco = -preco
+
+    status = random.choice(STATUS)
+    # 2% de status sujos
+    if random.random() < 0.02:
+      status = " " + status.upper() + " "
+
+    pedidos.append({
+      "pedido_id": i,
+      "cliente_id": random.randint(0, id_maximo_cliente),
+      "produto_id": random.randint(1, id_maximo_produto),
+      "data_compra": data_aleatoria(inicio, termino),
+      "quantidade": qtde,
+      "preco": preco,
+      "status": status
+    })
+  
+  # 1% de cliente_id em branco,tbm vai fazer o id virar float.
+  id_null = random.sample(range(QTDE_PEDIDOS), int(QTDE_PEDIDOS * 0.01))
+  r_pedidos = pd.DataFrame(pedidos)
+  r_pedidos.loc[id_null, "cliente_id"] = np.nan
+
+  return r_pedidos
 
 
 def main():
@@ -82,6 +132,11 @@ def main():
   print("Gerando produtos", end="...\n")
   produtos = gerar_produtos()
   produtos.to_csv("data/produtos.csv", index=False)
+  print(f"criado | produtos.csv | com {len(produtos)} produtos")
+
+  print("Gerando produtos", end="...\n")
+  pedidos = gerar_pedidos(len(clientes), len(produtos))
+  pedidos.to_csv("data/pedidos.csv", index=False)
   print(f"criado | produtos.csv | com {len(produtos)} produtos")
 
 if __name__ == "__main__":

@@ -1,33 +1,33 @@
 produto_id,nome,categoria,preco,marca
-1,Smartphone,Eletrônicos,3367.12,Marca D
-2,Notebook,Eletrônicos,1671.22,Marca A
-3,Tablet,Eletrônicos,1927.93,Marca B
-4,Fone Bluetooth,Eletrônicos,1615.16,Marca B
-5,Smartwatch,Eletrônicos,2888.23,Marca B
-6,Carregador Portátil,Eletrônicos,133.02,Marca D
-7,Cabo USB-C,Eletrônicos,1866.05,Marca A
-8,Camiseta,Vestuário,306.66,Marca B
-9,Calça Jeans,Vestuário,238.89,Marca B
-10,Tênis Casual,Vestuário,302.98,Marca B
-11,Jaqueta,Vestuário,399.41,Marca D
-12,Moletom,Vestuário,157.83,Marca A
-13,Vestido,Vestuário,42.18,Marca C
-14,Sandália,Vestuário,266.29,Marca D
-15,Panela Antiaderente,Casa & Cozinha,240.0,Marca B
-16,Jogo de Cama,Casa & Cozinha,370.25,Marca A
-17,Toalha,Casa & Cozinha,295.88,Marca D
-18,Liquidificador,Casa & Cozinha,543.25,Marca D
-19,Cafeteira,Casa & Cozinha,237.93,Marca D
-20,Travesseiro,Casa & Cozinha,217.76,Marca D
-21,Bicicleta,Esportes,97.03,Marca B
-22,Halteres,Esportes,864.31,Marca B
-23,Tapete de Yoga,Esportes,793.86,Marca D
-24,Mochila Esportiva,Esportes,454.38,Marca C
-25,Garrafa Térmica,Esportes,30.94,Marca D
-26,Corda de Pular,Esportes,650.93,Marca B
-27,Romance Nacional,Livros,70.25,Marca D
-28,Autoajuda Bestseller,Livros,34.19,Marca D
-29,Livro Técnico Python,Livros,103.01,Marca A
-30,HQ Marvel,Livros,107.85,Marca A
-31,Mangá Demon Slayer,Livros,88.67,Marca C
-32,Atlas Histórico,Livros,104.1,Marca D
+1,Smartphone,Eletrônicos,3456.25,Marca A
+2,Notebook,Eletrônicos,2757.0,Marca D
+3,Tablet,,2062.37,Marca B
+4,Fone Bluetooth,Eletrônicos,1368.44,Marca C
+5,Smartwatch,Eletrônicos,392.51,Marca D
+6,Carregador Portátil,Eletrônicos,218.94,Marca D
+7,Cabo USB-C,Eletrônicos,599.06,Marca A
+8,Camiseta,Vestuário,158.39,Marca A
+9,Calça Jeans,Vestuário,273.97,Marca B
+10,Tênis Casual,Vestuário,83.13,Marca C
+11,Jaqueta,Vestuário,62.48,Marca A
+12,Moletom,Vestuário,319.75,Marca D
+13,Vestido,Vestuário,95.26,Marca D
+14,Sandália,Vestuário,161.67,Marca C
+15,Panela Antiaderente,Casa & Cozinha,377.54,Marca D
+16,Jogo de Cama,Casa & Cozinha,65.99,Marca C
+17,Toalha,Casa & Cozinha,30.7,Marca D
+18,Liquidificador,Casa & Cozinha,471.78,Marca D
+19,Cafeteira,Casa & Cozinha,274.44,Marca C
+20,Travesseiro,Casa & Cozinha,270.17,Marca C
+21,Bicicleta,Esportes,1016.98,Marca B
+22,Halteres,Esportes,1344.95,Marca A
+23,Tapete de Yoga,Esportes,682.72,Marca A
+24,Mochila Esportiva,Esportes,1168.95,Marca C
+25,Garrafa Térmica,Esportes,1317.94,Marca D
+26,Corda de Pular,Esportes,459.64,Marca B
+27,Romance Nacional,Livros,51.19,Marca C
+28,Autoajuda Bestseller,Livros,27.09,Marca D
+29,Livro Técnico Python,Livros,36.72,Marca D
+30,HQ Marvel,Livros,58.95,Marca C
+31,Mangá Demon Slayer,Livros,88.24,Marca D
+32,Atlas Histórico,Livros,45.89,Marca A
